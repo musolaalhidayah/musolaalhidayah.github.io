@@ -1,0 +1,291 @@
+.jumbotron {
+  padding-top: 6rem;
+  background-color: #e2edff;
+}
+
+section {
+  padding-top: 5rem;
+}
+
+#pengurus {
+  background-color: #e2edff;
+}
+
+#acara {
+  background-color: #e2edff;
+}
+
+#tabel {
+  background-color: #e2edff;
+}
+
+#contact {
+  background-color: #e2edff;
+}
+
+#ling {
+  background-color: #e2edff;
+}
+
+#section-dkm {
+  background-color: #e2edff;
+}
+
+.tanda {
+  /* background-color: aqua; */
+  text-align: center;
+}
+
+.ttd p {
+  display: block;
+  text-align: 50%;
+}
+
+.keterangan {
+  display: block;
+  background-color: aqua;
+  position: relative;
+  margin-left: -50%;
+}
+
+h2 {
+  text-align: center;
+  color: #2e7d32;
+  font-size: 18px;
+}
+.periode {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Biar bisa di scroll ke samping di HP */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 650px; /* biar kolom ga ketumpuk */
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px 8px;
+  text-align: center;
+  font-size: 14px;
+  white-space: nowrap; /* biar teks ga turun ke bawah */
+}
+th {
+  background-color: #2e7d32;
+  color: white;
+  position: sticky;
+  top: 0; /* header nempel pas di scroll */
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.total {
+  font-weight: bold;
+  background-color: #e8f5e9;
+}
+.masuk {
+  color: green;
+  font-weight: bold;
+}
+.keluar {
+  color: red;
+  font-weight: bold;
+}
+
+/* Versi HP: bikin lebih kecil */
+@media screen and (max-width: 600px) {
+  th,
+  td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+}
+
+.ttd {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+}
+/* akhir css tabel */
+
+/* css detail */
+.containerx {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cardx {
+  background: linear-gradient(135deg, #347ff7, #f9d423);
+  border-radius: 20px;
+  width: 300px;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.cardx:hover {
+  transform: translateY(-5px);
+}
+.header {
+  position: relative;
+  padding: 20px;
+}
+.number {
+  background: rgba(0, 0, 0, 0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+.arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.content {
+  height: 0; /* kunci: pake height 0 */
+  overflow: hidden;
+  padding: 0 20px;
+  background: rgba(0, 0, 0, 0.15);
+  transition: height 0.4s ease, padding 0.4s ease;
+}
+.content p {
+  line-height: 1.6;
+  font-size: 14px;
+  margin: 15px 0;
+}
+/* pas aktif */
+.cardx.active .content {
+  height: auto; /* ngikutin isi */
+  padding: 10px 20px 20px 20px;
+}
+.cardx.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* Responsif HP */
+@media screen and (max-width: 768px) {
+  .container {
+    /* flex-direction: column; */
+    align-items: center;
+  }
+  .cardx {
+    width: 90%;
+  }
+}
+/* akhir css detail */
+
+/* css text area */
+textarea {
+  padding: 1rem 0.5rem;
+  field-sizing: content;
+  min-block-size: 3.5rlh;
+  min-inline-size: 23ch;
+  max-inline-size: 50ch;
+}
+
+.peta {
+  position: relative;
+  display: flex;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+}
+
+/* css sectyon skm */
+
+.section-dkm {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo-wrap {
+  flex: 0 0 120px;
+  display: flex;
+  justify-content: center;
+}
+.logo-wrap img {
+  width: 110px;
+  height: 110px;
+}
+
+/* Teks */
+.text-wrap {
+  flex: 1 1 350px;
+  color: #222;
+  line-height: 1.7;
+  font-size: 15px;
+}
+.text-wrap p {
+  margin: 0;
+}
+
+/* Tombol */
+.button-wrap {
+  flex: 1 1 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.btnx {
+  background: #4f6f7a;
+  color: white;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.btnx:hover {
+  background: #3a5560;
+  transform: translateY(-2px);
+}
+
+/* Responsif HP */
+@media screen and (max-width: 768px) {
+  .section-dkm {
+    flex-direction: column;
+    text-align: center;
+  }
+  .logo-wrap img {
+    width: 90px;
+    height: 90px;
+  }
+  .button-wrap {
+    width: 100%;
+  }
+}
